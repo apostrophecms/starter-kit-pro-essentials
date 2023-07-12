@@ -4,6 +4,7 @@
 Having it installed in your VSCode will ensure that adding/changing heading will be auto-populated here. -->
 - [Apostrophe Pro Boilerplate](#apostrophe-pro-boilerplate)
   - [Purpose](#purpose)
+  - [Before you begin](#before-you-begin)
   - [First Steps: required before startup](#first-steps-required-before-startup)
     - [Setting your shortName](#setting-your-shortname)
     - [Disabled File Key](#disabled-file-key)
@@ -34,6 +35,12 @@ This boilerplate project includes:
 * Basic example configuration of the `@apostrophecms-pro/palette` module.
 * The `@apostrophecms-pro/document-versions` module.
 * Simple examples of front-end code.
+
+## Before you begin
+
+This document assumes familiarity with Apostrophe concepts. If you are not already familiar with
+single-site Apostrophe development, you should pause here and familiarize yourself with the
+[A3 ApostropheCMS documentation](https://v3.docs.apostrophecms.org/) as a starting point.
 
 ## First Steps: required before startup
 
@@ -108,8 +115,8 @@ And log in with the admin account you created for the site. Then make some simpl
 
 Right now we have basic example templates in place. Let's look at where to put our code to customize the experience.
 
-If you are not already familiar with single-site Apostrophe development, you should pause here and
-[read the A3 ApostropheCMS documentation](https://a3.docs.apostrophecms.org/) as a starting point.
+> Again, if you are not already familiar with single-site Apostrophe development, you should pause here and
+[review the A3 ApostropheCMS documentation](https://a3.docs.apostrophecms.org/) as a starting point.
 
 Just like in any sigle-site Apostrophe project, modules are configured in `app.js`, and module code lives
 in subdirectories of `modules/`.
