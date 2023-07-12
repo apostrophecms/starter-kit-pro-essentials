@@ -145,7 +145,7 @@ more Sass SCSS code.
 
 #### Frontend Assets With Your Own Build Process
 
-A sample webpack build is not included as standard equipment, as `ui/src` suffices for most needs, and the Webpack configuration
+A sample webpack build is not included as standard equipment, as `ui/src` suffices for most needs, and the built-in, automatic Webpack configuration
 can be extended, per our public documentation. However, if you prefer to create your own webpack configuration, the typical pattern
 is to configure the output of your build process to be a `ui/public/something.js` file in any module in your Apostrophe project.
 
