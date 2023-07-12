@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# This project requires an asset build. Assembly will
-# run this script at the appropriate step in the deployment
-# process.
+# This project requires an asset build
 
 npm run build || exit 1
