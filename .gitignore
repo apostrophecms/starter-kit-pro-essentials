@@ -1,0 +1,13 @@
+# vim swapfiles
+*.swp
+.DS_Store
+/locales
+npm-debug.log
+/data
+/apos-build
+/public/apos-frontend
+/public/modules
+/public/uploads
+/public/svgs/*.svg
+node_modules
+/public/modules
