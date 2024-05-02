@@ -1,8 +1,8 @@
-# Apostrophe Pro Boilerplate
+# Apostrophe Pro Essentials Starter Kit
 
 <!-- TOC is auto generated via VSCode extensions https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one.
 Having it installed in your VSCode will ensure that adding/changing heading will be auto-populated here. -->
-- [Apostrophe Pro Boilerplate](#apostrophe-pro-boilerplate)
+- [Apostrophe Pro Essentials Starter Kit](#apostrophe-pro-essentials-starter-kit)
   - [Purpose](#purpose)
   - [Before you begin](#before-you-begin)
   - [First Steps: required before startup](#first-steps-required-before-startup)
