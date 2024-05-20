@@ -1,0 +1,61 @@
+@import '../../../../theme-default/ui/src/scss/settings/_color';
+
+.hero-widget {
+  --z-index-content: 1;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: var(--palette-grid-margin);
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  &.hero-widget--small {
+    min-height: 20vh;
+  }
+
+  &.hero-widget--medium {
+    min-height: 50vh;
+  }
+
+  &.hero-widget--large {
+    min-height: 80vh;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.hero-widget__content {
+  z-index: var(--z-index-content);
+  max-width: 620px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+  }
+}
+
+.hero-widget__video,
+.hero-widget__screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-widget__video {
+  object-fit: cover;
+}
+
+.hero-widget__screen {
+  background-color: rgba($color-black, 0.5);
+}
