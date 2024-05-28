@@ -34,7 +34,7 @@ module.exports = {
     group: {
       navigation: {
         label: 'Site Header',
-        fields: ['logo', 'headerLinks']
+        fields: [ 'logo', 'headerLinks' ]
       }
     }
   }

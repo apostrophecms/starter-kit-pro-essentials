@@ -21,7 +21,7 @@ module.exports = {
         '|',
         'colorButton'
       ],
-      insert: ['image', 'horizontalRule'],
+      insert: [ 'image', 'horizontalRule' ],
       styles: [
         {
           tag: 'h1',
@@ -76,7 +76,7 @@ module.exports = {
           superResult.allowedStyles.span = {};
         }
 
-        superResult.allowedStyles.span.color = [/^#(0x)?[0-9a-f]+$/i, /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/];
+        superResult.allowedStyles.span.color = [ /^#(0x)?[0-9a-f]+$/i, /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/ ];
 
         if (!superResult.allowedAttributes.span) {
           superResult.allowedAttributes.span = [];
