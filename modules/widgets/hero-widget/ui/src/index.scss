@@ -39,6 +39,10 @@
   h6 {
     margin-bottom: 0;
   }
+
+  .button:not(:last-of-type) {
+    margin-right: 20px;
+  }
 }
 
 .hero-widget__video,
@@ -56,4 +60,8 @@
 
 .hero-widget__screen {
   background-color: rgba($color-black, 0.5);
+}
+
+.hero-widget__actions {
+  margin-top: 20px;
 }
