@@ -6,8 +6,17 @@ module.exports = {
         label: 'Main',
         options: {
           widgets: {
-            '@apostrophecms-pro/basics-column': {},
-            '@apostrophecms-pro/basics-hero': {}
+            hero: {
+              /**
+               * We could allow the editor choose a display option but
+               * we always want the Hero to cover the width of the screen
+               * on the Homepage. We're passing an option to our widget
+               * here so that the appearance always stays consistent
+               * for this area.
+               */
+              fullWidth: true
+            },
+            column: {}
           }
         }
       }
