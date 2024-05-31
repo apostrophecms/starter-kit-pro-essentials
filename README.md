@@ -1,8 +1,8 @@
-# Apostrophe Pro Essentials Starter Kit
+# Apostrophe Starter Kit Pro Essentials 
 
 <!-- TOC is auto generated via VSCode extensions https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one.
 Having it installed in your VSCode will ensure that adding/changing heading will be auto-populated here. -->
-- [Apostrophe Pro Essentials Starter Kit](#apostrophe-pro-essentials-starter-kit)
+- [Apostrophe Starter Kit Pro Essentials](#apostrophe-starter-kit-pro-essentials)
   - [Purpose](#purpose)
   - [Before you begin](#before-you-begin)
   - [First Steps: required before startup](#first-steps-required-before-startup)
@@ -25,22 +25,22 @@ Having it installed in your VSCode will ensure that adding/changing heading will
 
 ## Purpose
 
-The purpose of this repository and this document is to serve as a quick start boilerplate for single-site Apostrophe Pro projects.
+The purpose of this repository and this document is to serve as a quick start for single-site Apostrophe Pro projects.
 As such, it includes several Pro modules, pre-configured, although it does not include all, as developer needs vary. If you are
 reading this, you should have access to additionally `npm install` and configure any of the Pro modules listed on our website.
 
-This boilerplate project includes:
+This Starter Kit includes:
 
-* Basic examples using the `@apostrophecms-pro/basics` modules, including multicolumn, hero, button, card and slideshow widgets.
-* Basic example configuration of the `@apostrophecms-pro/palette` module.
 * The `@apostrophecms-pro/document-versions` module.
-* Simple examples of front-end code.
+* Example configuration of the `@apostrophecms-pro/palette` module.
+* Basic Apostrophe Widgets, including an Accordion, Card, Column, Hero, Link, and Slideshow Widget located in `modules/widgets`.
+* Basic examples of theme specific front-end code.
 
 ## Before you begin
 
 This document assumes familiarity with Apostrophe concepts. If you are not already familiar with
 single-site Apostrophe development, you should pause here and familiarize yourself with the
-[A3 ApostropheCMS documentation](https://v3.docs.apostrophecms.org/) as a starting point.
+[ApostropheCMS documentation](https://docs.apostrophecms.org/) as a starting point.
 
 ## First Steps: required before startup
 
@@ -80,7 +80,7 @@ For more information see the Apostrophe [Getting Started Tutorial](https://docs.
 
 ## Starting Up In Development
 
-First, `git clone` the boilerplate project and push it up to your own git repository under an appropriate name,
+First, `git clone` the Starter Kit and push it up to your own git repository under an appropriate name,
 matching your choice of `shortName`, for ongoing work.
 
 Then type:
@@ -116,9 +116,9 @@ And log in with the admin account you created for the site. Then make some simpl
 Right now we have basic example templates in place. Let's look at where to put our code to customize the experience.
 
 > Again, if you are not already familiar with single-site Apostrophe development, you should pause here and
-[review the A3 ApostropheCMS documentation](https://a3.docs.apostrophecms.org/) as a starting point.
+[review the ApostropheCMS documentation](https://docs.apostrophecms.org/) as a starting point.
 
-Just like in any sigle-site Apostrophe project, modules are configured in `app.js`, and module code lives
+Just like in any single-site Apostrophe project, modules are configured in `app.js`, and module code lives
 in subdirectories of `modules/`.
 
 Feel free to add page templates and modules as you would with an ordinary open-source Apostrophe project. You can `npm install` modules
@@ -151,7 +151,7 @@ is to configure the output of your build process to be a `ui/public/something.js
 
 #### Serving Static Files: Fonts and Static Images
 
-If you need to serve static files, you can do this much as you would in standalone A3 development.
+If you need to serve static files, you can do this much as you would in standalone Apostrophe development.
 
 The folder `public` maps to `/` in the URL space of a site. For instance, `public/fonts/myfile.ttf` maps to the URL `/fonts/myfile.ttf`.
 For assets like favicons and fonts, you can add `link` tags to the `extraHead` block already present in
