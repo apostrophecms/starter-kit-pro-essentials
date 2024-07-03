@@ -1,7 +1,7 @@
 {
   "name": "starter-kit-pro-essentials",
   "version": "2.0.0",
-  "description": "A starting point for Apostrophe Pro projects in A3",
+  "description": "A starting point for Apostrophe Pro projects",
   "private": true,
   "scripts": {
     "build": "APOS_UPLOADFS_ASSETS=1 NODE_ENV=production bash -c 'node app @apostrophecms/asset:build'",
