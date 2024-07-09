@@ -22,12 +22,21 @@ Having it installed in your VSCode will ensure that adding/changing heading will
   - [Hosting and Deployment](#hosting-and-deployment)
     - [If we are your host](#if-we-are-your-host)
     - [Self-hosting](#self-hosting)
+  - [Provided widgets](#provided-widgets)
+    - [`accordion-widget`](#accordion-widget)
+    - [`card-widget`](#card-widget)
+    - [`column-widget`](#column-widget)
+    - [`hero-widget`](#hero-widget)
+    - [`link-widget`](#link-widget)
+    - [`slideshow-widget`](#slideshow-widget)
 
 ## Purpose
 
 The purpose of this repository and this document is to serve as a quick start for single-site Apostrophe Pro projects.
 As such, it includes several Pro modules, pre-configured, although it does not include all, as developer needs vary. If you are
 reading this, you should have access to additionally `npm install` and configure any of the Pro modules listed on our website.
+
+It also serves as example code for creating your own custom modules and organizing your files in an ApostropheCMS project. The [section describing the widgets](#provided-widgets) outlines some code practices and features that can be used in your own custom modules.
 
 This Starter Kit includes:
 
@@ -67,14 +76,14 @@ leave it set to `CHANGEME`.
 ### Operating System: Mac, Linux, or Virtual Linux
 
 **Your local development environment must be either MacOS or Linux.** If your development computer runs Windows, we recommend development on
-Windows Subsystem for Linux (WSL). Microsoft recommends WSL for Node.js development. 
+Windows Subsystem for Linux (WSL). Microsoft recommends WSL for Node.js development.
 
 ### Software Installation Requirements
 
 To test-drive the project in development, make sure you have Apostrophe's usual dependencies on your local machine:
 
-* MongoDB (4.4.x or better, we recommend 5.x or better)
-* NodeJS (18.x or better for new projects, 14.x and 16.x reach end of life this year)
+* MongoDB (5.x or better, we recommend 6.x or better)
+* NodeJS (18.x or better)
 
 For more information see the Apostrophe [Getting Started Tutorial](https://docs.apostrophecms.org/getting-started/setting-up-your-environment.html).
 
@@ -85,13 +94,13 @@ matching your choice of `shortName`, for ongoing work.
 
 Then type:
 
-```
+``` sh
 npm install
 ```
 
 After installation, add an admin user:
 
-```
+``` sh
 node app @apostrophecms/user:add admin admin
 ```
 
@@ -99,13 +108,13 @@ Enter a password when prompted.
 
 Next launch the application:
 
-```
+``` sh
 npm run dev
 ```
 
 When ready, visit:
 
-```
+``` sh
 http://localhost:3000/login
 ```
 
@@ -133,6 +142,10 @@ code organization, this project contains a `theme-default` module with a sample
 simplifies later migration to an Assembly multisite project especially if you anticipate
 implementing a choice of themes at that time.
 
+The `theme-default` module also modifies the base webpack build to incorporate SCSS variables for colors and fonts. This is included to demonstrate how to set up centralized theme management with global variables in one place. It also adds a function for converting font sizes from `px` to `rem`. While this is a useful function that is used in several of the `theme-default` stylesheets, it primarily serves to illustrate how SCSS functions can be added to your project. A similar approach would be used to add in any mixins that subsequent stylesheets utilize.
+
+The `views` folder of the `theme-default` module has two markup files that provide the HTML for the login screen. The main `welcome.html` file contains a conditional block for displaying different content whether there is a user is logged in or not. It has a second conditional block for displaying markup from the `placeholder.html` file if no content has been added to the page. You can choose to maintain this structure and modify the `welcome.html` file, or change the `modules/@apostrophecms/home-page/views/page.html` to contain your own markup.
+
 #### Modern Frontend Assets Without A Custom Build Process
 
 There is no need for a custom Webpack configuration in most cases. Specifically, you can follow our documentation and place your modern
@@ -146,7 +159,7 @@ more Sass SCSS code.
 #### Frontend Assets With Your Own Build Process
 
 A sample webpack build is not included as standard equipment, as `ui/src` suffices for most needs, and the built-in, automatic Webpack configuration
-can be extended, per our public documentation. However, if you prefer to create your own webpack configuration, the typical pattern
+can be extended, per our public documentation and as illustrated. However, if you prefer to create your own webpack configuration, the typical pattern
 is to configure the output of your build process to be a `ui/public/something.js` file in any module in your Apostrophe project.
 
 #### Serving Static Files: Fonts and Static Images
@@ -163,7 +176,7 @@ The palette module allows styles to be edited visually on the site. It is config
 There you can specify the selectors, CSS properties, and field types to be used to manipulate color, font size, font family
 and other aspects of the site as a whole.
 
-For complete information and a sample configuration, see the [@apostrophecms-pro/palette module documentation](https://npmjs.org/package/@apostrophecms-pro/palette). *You will need to be logged into an npm account that has been granted access, such as the one you used to npm install this project.*
+For complete information and a sample configuration, see the [@apostrophecms-pro/palette module documentation](https://apostrophecms.com/extensions/palette-3).
 
 > Note that like all other changes, palette changes do not take place for logged-out users until the editor clicks "Publish."
 
@@ -179,7 +192,7 @@ Apostrophe will complete the build steps listed in the `build` npm command provi
 database migrations before restarting with your newest code.
 
 ### Self-hosting
- 
+
 Self-hosting is also an option if you have not chosen to host with us. We offer several how-to guides on this, such as
 [Ubuntu hosting setup](https://v3.docs.apostrophecms.org/cookbook/ubuntu-hosting.html) and
 [deploying Apostrophe in the cloud with Heroku](https://v3.docs.apostrophecms.org/cookbook/deploying-to-heroku.html). The main new element
@@ -203,3 +216,32 @@ not, reach out to our support team.
 
 It is also possible to use an environment variable for additional security, depending on your preferred deployment and hosting
 solution. Please see the npm documentation for more information on that option.
+
+## Provided widgets
+There are six basic widget modules located in the `modules/widgets` folder of this starter kit. This supplements the core `rich-text`, `image`, `video`, and `html` widgets. They can be altered to fit the design and functionality of your project or act as a blueprint to build your own custom widgets. Both the `hero` and `column` widgets have been added to the `main` area of the `@apostrophecms/home-page`. The remainder of the basic widgets have been added to the areas of the `column` widget as described below.
+
+If you look at the `app.js` file you won't see these widget modules in the `modules` object. Instead, they are being registered using the `nestedModuleSubdirs` property. Setting this property to `true` will cause Apostrophe to register all the modules listed in the `modules.js` file of any subfolder in the project-level `modules` folder. You can choose to organize any custom modules, such as grouping all of your piece-types, to keep your `modules` folder and the `app.js` file less cluttered. Note that if you choose to move any of the provided widgets out of the current folder you will need to add them to the `app.js` and remove them from the `modules.js` file.
+
+All the styling for the supplied widgets is located in the `ui/src/index.scss` file of each module. You can choose to maintain this structure, move the styling to the `theme-default/ui/src/scss` folder, or organize them in a different project-specific manner. Note that for them to be included in the standard webpack build, they need to be imported into a `<module>/ui/src/index.scss` file.
+
+### `accordion-widget`
+The `accordion-widget` implements an accordion element powered by the [`accordion-js` npm package](https://www.npmjs.com/package/accordion-js). You can read about additional configuration options in the documentation of that package. The module consists of a main `index.js` file with the content schema fields, plus a `views` folder that contains a `widget.html` file with the Nunjucks markup for the accordion.
+
+Finally, there is the `ui/src` folder that contains the `index.scss` stylesheet and the `index.js` file that contains the JavaScript that is delivered to the frontend and powers the accordion using a [widget player](https://docs.apostrophecms.org/guide/custom-widgets.html#client-side-javascript-for-widgets). Any custom widgets that require client-side code will be structured in this same way. Data is passed from the schema fields to the browser for use in the player script by adding it to a data attributes in the template.
+
+### `card-widget`
+The `card-widget` creates a simple card with optional image and text. The card can be made directly clickable, or can have links and buttons added. The schema fields for these elements are provided by the `lib/schema/link.js` file, which serves as a model for implementing reusable parts of widgets. These same schema fields are reused in the `hero` and `link` widgets and can be used in your custom project widgets. The markup for the links is imported into the `card-widget` template from the `views/fragments/link.html` file using the `rendercall` helper. This is present in a simpler form in the `links-widget`. Again, your custom modules (not just widgets) can utilize fragments to replicate similar areas of markup in this same way.
+
+### `column-widget`
+The `column-widget` implements one method of adding a user-selected number of columns to a page. It uses a select field and conditional fields that restrict the number of columns based on the value of the select. Each column has an area with widgets for the `link`, `card`, and `accordion` basic widgets, plus the core `rich-text`, `image`, and `video` widgets. These are added through a shared configuration object that defines the available widgets for each column. The first column additionally adds the basic `swiper` widget.
+
+The widget also provides a `helper(self)` customization function that is used in the Nunjucks template. Depending on the value of the select field it returns the correct number of columns. The `helper(self)` functions can be used in your custom modules to provide computed values from data passed back from the markup.
+
+### `hero-widget`
+The `hero-widget` implements a hero element with image or color background, text and links. As stated above, this module reuses the `links.js` helper file. It also demonstrates how to use `relationship` schema fields to add the image or video for the background.
+
+### `link-widget`
+This simple widget adds either a button or inline-link. As described for the `card-widget`, It utilizes the `lib/schema/link.js` helper file and the `views/fragments/link.html` fragment. Within the widget template there is a `rendercall` that passes data from the widget schema fields to the fragment.
+
+### `slideshow-widget`
+The `slideshow-widget`, much like the `accordion-widget`, utilizes client-side JavaScript. For this widget the `ui/src/index.js` is adding the [`swiper.js` package](https://swiperjs.com/) to the player. Again, data is passed into the player script by adding it to a data attribute in the template.
