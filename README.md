@@ -54,6 +54,7 @@ If you have a Pro license it will also have:
 * Integration of the `@apostrophecms-pro/document-versions` module.
 * Example configuration for the `@apostrophecms-pro/palette` module.
 
+The Pro Essential Starter Kits is intended as a foundation for your projects and should be forked and customized to meet your needs. Once forked, your project can diverge significantly, so we do not recommend merging updates from the starter kits directly. Instead, periodically review the kit repository for ideas and improvements while managing core functionality updates through the usual `npm update` process.
 
 ## Before you begin
 
