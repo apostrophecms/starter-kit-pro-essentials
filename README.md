@@ -36,7 +36,7 @@ Having it installed in your VSCode will ensure that adding/changing heading will
 
 >To obtain a license, please visit our [website](https://apostrophecms.com/pro) to learn more. You can contact our support team for assistance or purchase a license directly through our [Apostrophe Workspaces portal](https://app.apostrophecms.com/login).
 
->Additionally, we offer several open-source starter kits that are available without any licensing restrictions. These kits, along with links to their GitHub repositories, are listed on our [website](https://apostrophecms.com/starter-kits).
+>As an alternative to this starter template, we offer several open-source starter kits that are available without any licensing restrictions. These kits, along with links to their GitHub repositories, are listed on our [website](https://apostrophecms.com/starter-kits).
 
 ## Purpose
 
