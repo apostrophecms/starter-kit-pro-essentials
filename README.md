@@ -30,20 +30,30 @@ Having it installed in your VSCode will ensure that adding/changing heading will
     - [`link-widget`](#link-widget)
     - [`slideshow-widget`](#slideshow-widget)
 
+>**Important Notice:**
+
+>The code in this starter kit is freely available for use in public or commercial projects. However, to use it as a template for a new project, you will need a Pro license to install certain dependencies.
+
+>To obtain a license, please visit our [website](https://apostrophecms.com/pro) to learn more. You can contact our support team for assistance or purchase a license directly through our [Apostrophe Workspaces portal](https://app.apostrophecms.com/login).
+
+>Additionally, we offer several open-source starter kits that are available without any licensing restrictions. These kits, along with links to their GitHub repositories, are listed on our [website](https://apostrophecms.com/starter-kits).
+
 ## Purpose
 
 The purpose of this repository and this document is to serve as a quick start for single-site Apostrophe Pro projects.
-As such, it includes several Pro modules, pre-configured, although it does not include all, as developer needs vary. If you are
-reading this, you should have access to additionally `npm install` and configure any of the Pro modules listed on our website.
 
-It also serves as example code for creating your own custom modules and organizing your files in an ApostropheCMS project. The [section describing the widgets](#provided-widgets) outlines some code practices and features that can be used in your own custom modules.
+As such, it includes several Pro modules, pre-configured, although it does not include all, as developer needs vary. Users with a Pro license will have access to additionally `npm install` and configure any of the Pro modules listed on our website.
+
+It also serves as example code for creating your own custom modules and organizing your files in any ApostropheCMS project, even one without additional licensing. The [section describing the widgets](#provided-widgets) outlines some code practices and features that can be used in your own custom modules.
 
 This Starter Kit includes:
-
-* The `@apostrophecms-pro/document-versions` module.
-* Example configuration of the `@apostrophecms-pro/palette` module.
 * Basic Apostrophe Widgets, including an Accordion, Card, Column, Hero, Link, and Slideshow Widget located in `modules/widgets`.
 * Basic examples of theme specific front-end code.
+
+If you have a Pro license it will also have:
+* Integration of the `@apostrophecms-pro/document-versions` module.
+* Example configuration for the `@apostrophecms-pro/palette` module.
+
 
 ## Before you begin
 
@@ -131,7 +141,7 @@ Just like in any single-site Apostrophe project, modules are configured in `app.
 in subdirectories of `modules/`.
 
 Feel free to add page templates and modules as you would with an ordinary open-source Apostrophe project. You can `npm install` modules
-like `@apostrophecms/blog` and configure them in a normal way. You can also install additional Pro modules like
+like `@apostrophecms/blog` and configure them in a normal way. With a Pro license you can also install additional Pro modules like
 `@apostrophecms-pro/advanced-permission` if they are necessary to your plans.
 
 ### The `theme-default` module
@@ -172,7 +182,7 @@ For assets like favicons and fonts, you can add `link` tags to the `standardHead
 
 ### Palette Configuration
 
-The palette module allows styles to be edited visually on the site. It is configured in `modules/@apostrophecms-pro/palette/index.js`.
+The `@apostrophecms-pro/palette` module requires Pro licensing and allows styles to be edited visually on the site. It is configured in `modules/@apostrophecms-pro/palette/index.js`.
 There you can specify the selectors, CSS properties, and field types to be used to manipulate color, font size, font family
 and other aspects of the site as a whole.
 
