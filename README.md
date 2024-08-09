@@ -32,9 +32,9 @@ Having it installed in your VSCode will ensure that adding/changing heading will
 
 >**Important Notice:**
 
->The code in this starter kit is freely available for use in public or commercial projects. However, to use it as a template for a new project, you will need a Pro license to install certain dependencies.
+>The code in this starter kit is freely available for use in your projects. However, to use it as a starter kit for a new project, you will need a Pro subscription to install certain dependencies.
 
->To obtain a license, please visit our [website](https://apostrophecms.com/pro) to learn more. You can contact our support team for assistance or purchase a license directly through our [Apostrophe Workspaces portal](https://app.apostrophecms.com/login).
+>To obtain a license, please visit our [website](https://apostrophecms.com/pro) to learn more. You can contact our support team for assistance or purchase a license directly through your [Apostrophe Workspace](https://app.apostrophecms.com/login).
 
 >As an alternative to this starter template, we offer several open-source starter kits that are available without any licensing restrictions. These kits, along with links to their GitHub repositories, are listed on our [website](https://apostrophecms.com/starter-kits).
 
@@ -42,15 +42,15 @@ Having it installed in your VSCode will ensure that adding/changing heading will
 
 The purpose of this repository and this document is to serve as a quick start for single-site Apostrophe Pro projects.
 
-As such, it includes several Pro modules, pre-configured, although it does not include all, as developer needs vary. Users with a Pro license will have access to additionally `npm install` and configure any of the Pro modules listed on our website.
+As such, it includes several pre-configured Pro modules, although it does not include all, as developer needs vary. Users with a Pro license will have access to additionally `npm install` and configure [any of the Pro modules listed on our website](https://apostrophecms.com/extensions?license=pro).
 
-It also serves as example code for creating your own custom modules and organizing your files in any ApostropheCMS project, even one without additional licensing. The [section describing the widgets](#provided-widgets) outlines some code practices and features that can be used in your own custom modules.
+It also serves as example code for creating your own custom modules and organizing your files in any ApostropheCMS project. The [section describing the widgets](#provided-widgets) outlines some code practices and features that can be used in your own custom modules.
 
 This Starter Kit includes:
 * Basic Apostrophe Widgets, including an Accordion, Card, Column, Hero, Link, and Slideshow Widget located in `modules/widgets`.
 * Basic examples of theme specific front-end code.
 
-If you have a Pro license it will also have:
+If you have a Pro subscription it will also include:
 * Integration of the `@apostrophecms-pro/document-versions` module.
 * Example configuration for the `@apostrophecms-pro/palette` module.
 
