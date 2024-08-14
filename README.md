@@ -1,4 +1,12 @@
-# Apostrophe Starter Kit Pro Essentials 
+# Apostrophe Starter Kit Pro Essentials
+
+>**Important Notice:**
+>
+>The code in this starter kit is freely available for use in your projects. However, to use it as a starter kit for a new project, you will need a Pro subscription to install certain dependencies.
+>
+>To obtain a license, please visit our [website](https://apostrophecms.com/pro) to learn more. You can contact our support team for assistance or purchase a license directly through your [Apostrophe Workspace](https://app.apostrophecms.com/login).
+>
+>As an alternative to this starter template, we offer several open-source starter kits that are available without any licensing restrictions. These kits, along with links to their GitHub repositories, are listed on our [website](https://apostrophecms.com/starter-kits).
 
 <!-- TOC is auto generated via VSCode extensions https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one.
 Having it installed in your VSCode will ensure that adding/changing heading will be auto-populated here. -->
@@ -29,14 +37,6 @@ Having it installed in your VSCode will ensure that adding/changing heading will
     - [`hero-widget`](#hero-widget)
     - [`link-widget`](#link-widget)
     - [`slideshow-widget`](#slideshow-widget)
-
->**Important Notice:**
-
->The code in this starter kit is freely available for use in your projects. However, to use it as a starter kit for a new project, you will need a Pro subscription to install certain dependencies.
-
->To obtain a license, please visit our [website](https://apostrophecms.com/pro) to learn more. You can contact our support team for assistance or purchase a license directly through your [Apostrophe Workspace](https://app.apostrophecms.com/login).
-
->As an alternative to this starter template, we offer several open-source starter kits that are available without any licensing restrictions. These kits, along with links to their GitHub repositories, are listed on our [website](https://apostrophecms.com/starter-kits).
 
 ## Purpose
 
