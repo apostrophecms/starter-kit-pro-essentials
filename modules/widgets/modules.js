@@ -3,7 +3,7 @@
  * Feel free to remove if not needed or modify to fit your needs.
  */
 
-module.exports = {
+export default {
   'accordion-widget': {},
   'card-widget': {},
   'column-widget': {},

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   init(self) {
     self.addFilter({
       isBooleanAttr: self.isBooleanAttr

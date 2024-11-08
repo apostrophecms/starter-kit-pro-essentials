@@ -1,4 +1,7 @@
-require('apostrophe')({
+import apostrophe from 'apostrophe';
+
+apostrophe({
+  root: import.meta,
   shortName: 'CHANGEME',
   nestedModuleSubdirs: true,
   modules: {
@@ -17,6 +20,9 @@ require('apostrophe')({
         }
       }
     },
+
+    // Use Vite as the asset bundler and HMR server
+    '@apostrophecms/vite': {},
 
     // Just a nice place to keep helper functions that are
     // used across all sites
