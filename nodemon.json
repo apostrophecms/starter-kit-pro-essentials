@@ -1,23 +1,14 @@
 {
   "delay": 1000,
   "verbose": true,
-  "watch": [
-    "./app.js",
-    "./modules/**/*",
-    "./lib/**/*.js",
-    "./views/**/*.html"
-  ],
-  "ignoreRoot": [
-    ".git"
-  ],
+  "watch": ["./app.js", "./modules/**/*", "./lib/**/*.js", "./views/**/*.html"],
+  "ignoreRoot": [".git"],
   "ignore": [
-    "**/ui/apos/",
-    "**/ui/src/",
-    "**/ui/public/",
+    "**/ui/",
     "locales/*.json",
     "public/uploads/",
     "public/apos-frontend/*.js",
     "data/"
   ],
-  "ext": "json, js, html, scss, vue"
+  "ext": "json, js, cjs, html"
 }

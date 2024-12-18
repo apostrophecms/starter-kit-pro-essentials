@@ -8,15 +8,17 @@
  * and `group` property containing the group definition.
  */
 
-const path = require('path');
+import color from './lib/configs/color.js';
+import grid from './lib/configs/grid.js';
+import typography from './lib/configs/typography.js';
 
-const configs = require('require-all')({
-  dirname: path.join(
-    __dirname, 'lib/configs'
-  )
-});
+const configs = {
+  color,
+  grid,
+  typography
+};
 
-module.exports = {
+export default {
   fields: {
     add: filter(configs, 'add'),
     group: filter(configs, 'group')

@@ -5,11 +5,17 @@
  * site-specific JavaScript in this theme module.
  */
 
-const path = require('path');
+import path from 'node:path';
 
-const themeDir = path.resolve(process.cwd(), __dirname);
+// Dirname is not available in ESM, so we need to compute it
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
-module.exports = {
+const themeDir = path.resolve(
+  process.cwd(),
+  __dirname
+);
+
+export default {
   options: {
     alias: 'theme',
     // Silence startup warning about the lack of code since this
@@ -46,6 +52,25 @@ module.exports = {
               ]
             }
           ]
+        }
+      }
+    }
+  },
+  build: {
+    vite: {
+      extensions: {
+        themeVariables: {
+          css: {
+            preprocessorOptions: {
+              scss: {
+                additionalData: `
+@import "${themeDir}/ui/src/scss/settings/_color";
+@import "${themeDir}/ui/src/scss/settings/_font";
+@import "${themeDir}/ui/src/scss/functions/_rem";
+`
+              }
+            }
+          }
         }
       }
     }
