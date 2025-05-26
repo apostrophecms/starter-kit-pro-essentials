@@ -25,7 +25,7 @@
     "@apostrophecms-pro/document-versions": "^2.3.1",
     "@apostrophecms-pro/palette": "^4.3.2",
     "@apostrophecms/vite": "^1.0.0",
-    "accordion-js": "^3.3.4",
+    "accordion-js": "^3.4.1",
     "apostrophe": "^4.9.0",
     "normalize.css": "^8.0.1",
     "require-all": "^3.0.0",
