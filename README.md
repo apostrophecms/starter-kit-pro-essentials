@@ -187,7 +187,7 @@ The `@apostrophecms-pro/palette` module requires Pro licensing and allows styles
 There you can specify the selectors, CSS properties, and field types to be used to manipulate color, font size, font family
 and other aspects of the site as a whole.
 
-For complete information and a sample configuration, see the [@apostrophecms-pro/palette module documentation](https://apostrophecms.com/extensions/palette-3).
+For complete information and a sample configuration, see the [@apostrophecms-pro/palette module documentation](https://apostrophecms.com/extensions/palette-extension).
 
 > Note that like all other changes, palette changes do not take place for logged-out users until the editor clicks "Publish."
 
