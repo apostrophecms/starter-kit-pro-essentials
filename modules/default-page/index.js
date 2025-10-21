@@ -7,7 +7,7 @@ export default {
         label: 'Main',
         options: {
           widgets: {
-            '@apostrophecms/rich-text': {}
+            '@apostrophecms/layout': {}
           }
         }
       }
