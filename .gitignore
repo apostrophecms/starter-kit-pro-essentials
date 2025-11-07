@@ -11,3 +11,4 @@ npm-debug.log
 /public/svgs/*.svg
 node_modules
 /public/modules
+package-lock.json

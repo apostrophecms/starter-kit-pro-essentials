@@ -64,6 +64,12 @@ single-site Apostrophe development, you should pause here and familiarize yourse
 
 ## First Steps: required before startup
 
+> **📌 Note on Dependency Management**
+> 
+> This starter kit ships with `package-lock.json` in `.gitignore` to avoid merge conflicts during development. 
+> 
+> **For production use:** Remove `package-lock.json` from `.gitignore` and commit it to lock your dependencies. This ensures stable, reproducible builds. When you're ready to update dependencies, run `npm update` and commit the updated lock file.
+
 ### Setting your shortName
 
 **Don't leave this setting in `app.js`, or anything else, set to `CHANGEME`.** The `shortName` should usually be the same
