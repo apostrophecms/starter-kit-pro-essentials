@@ -5,9 +5,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "APOS_UPLOADFS_ASSETS=1 NODE_ENV=production bash -c 'node app @apostrophecms/asset:build'",
+    "build": "cross-env APOS_UPLOADFS_ASSETS=1 NODE_ENV=production bash -c 'node app @apostrophecms/asset:build'",
     "//": "because nodemon insists on executing 'start' if it exists, we must distinguish production",
-    "serve": "APOS_UPLOADFS_ASSETS=1 NODE_ENV=production npm run start",
+    "serve": "cross-env APOS_UPLOADFS_ASSETS=1 NODE_ENV=production npm run start",
     "start": "node app",
     "dev": "nodemon",
     "lint": "eslint . && stylelint '**/*.{scss,vue}'"
@@ -27,6 +27,7 @@
     "@apostrophecms/vite": "^1.0.0",
     "accordion-js": "^3.4.1",
     "apostrophe": "^4.9.0",
+    "cross-env": "^10.1.0",
     "normalize.css": "^8.0.1",
     "require-all": "^3.0.0",
     "swiper": "^11.1.3"
