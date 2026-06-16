@@ -1,3 +1,11 @@
+> [!WARNING]
+> **This repository is deprecated and no longer maintained.**
+>
+> We recommend migrating to one of our actively maintained ApostropheCMS starter kits:
+>
+> - **[Essentials](https://apostrophecms.com/docs/guide/apostrophe-standalone-essentials-overview.html)** — a clean, minimal starting point for standalone ApostropheCMS projects ([repo](https://github.com/apostrophecms/starter-kit-essentials))
+> - **[Demo](https://apostrophecms.com/docs/guide/apostrophe-demo-overview.html)** — a feature-rich reference implementation ([repo](https://github.com/apostrophecms/public-demo))
+
 # Apostrophe Starter Kit Pro Essentials
 
 >**Important Notice:**
@@ -23,9 +31,6 @@ Having it installed in your VSCode will ensure that adding/changing heading will
   - [Starting Up In Development](#starting-up-in-development)
   - [Site Development](#site-development)
     - [The `theme-default` module](#the-theme-default-module)
-      - [Modern Frontend Assets Without A Custom Build Process](#modern-frontend-assets-without-a-custom-build-process)
-      - [Frontend Assets With Your Own Build Process](#frontend-assets-with-your-own-build-process)
-      - [Serving Static Files: Fonts and Static Images](#serving-static-files-fonts-and-static-images)
     - [Palette Configuration](#palette-configuration)
   - [Hosting and Deployment](#hosting-and-deployment)
     - [If we are your host](#if-we-are-your-host)
