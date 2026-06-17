@@ -4,7 +4,7 @@
 > We recommend migrating to one of our actively maintained ApostropheCMS starter kits:
 >
 > - **[Essentials](https://apostrophecms.com/docs/guide/apostrophe-standalone-essentials-overview.html)** — a clean, minimal starting point for standalone ApostropheCMS projects ([repo](https://github.com/apostrophecms/starter-kit-essentials))
-> - **[Demo](https://apostrophecms.com/docs/guide/apostrophe-demo-overview.html)** — a feature-rich reference implementation ([repo](https://github.com/apostrophecms/public-demo))
+> - **[Demo](https://apostrophecms.com/docs/guide/apostrophe-demo-overview.html)** — a feature-rich reference implementation that works well for a Standalone Apostrophe PoC. ([repo](https://github.com/apostrophecms/public-demo))
 
 # Apostrophe Starter Kit Pro Essentials
 
